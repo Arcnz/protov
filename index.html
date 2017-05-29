@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <!--
+           _____    _______  __    _       
+          / ___ \  (  ___  )/  \  ( (    /|
+         / / _ \ \ | (   ) |\/) ) |  \  ( |
+        ( ( / \ ) )| (___) |  | | |   \ | |
+        | |(()// / |  ___  |  | | | (\ \) |
+        ( ( \___/  | (   ) |  | | | | \   |
+         \ \____/\ | )   ( |__) (_| )  \  |
+          \______/ |/     \|\____/|/    )_)
+                                   
+        -->
+        <meta charset="UTF-8">
+        <title>Vivid Esports</title>
+
+        <style type="text/css">
+
+          #section {
+          	height: 99vh;
+          	width: 100vw;
+          	padding-bottom:1vh;
+            position: relative;
+            display: flex;
+			justify-content: center;
+			align-items: center;
+          }
+
+          html,body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+          }
+
+          .logo {
+            position: absolute;
+            vertical-align: middle;
+		    z-index: 100;
+          }
+
+          #logoimg {
+          	height: 200px;
+          }
+
+          .delay {
+            animation-delay: 1.3s;
+          }
+
+          ::-webkit-scrollbar { 
+            display: none; 
+          }
+
+          .textbox {
+          	border-radius: 15px;
+          	border: 2px solid #43C6AC;
+		    padding: 2vh; 
+		    margin-left: 15vw;
+		    margin-right: 15vw;
+		    margin-top: 6vh;
+		    margin-bottom: 6vh;
+          }
+          button {
+			position: relative;
+			margin: 0 auto;
+			margin-top: 3vh;
+			width: 12em;
+			background-color: transparent;
+			color: #C1CCF0;
+			border: .3em solid #7289DA;
+			border-radius: 5em;
+			text-transform: uppercase;
+			text-align: center;
+			line-height: 2.5em;
+			font-size: 1.4em;
+			font-weight: bold;
+			font-family: 'Source Sans Pro';
+			cursor: pointer;	
+		  }
+		  
+        </style>
+        
+        <!-- Resources -->
+        <link rel="stylesheet" href="resources/animate.min.css">
+        <link rel="stylesheet" href="resources/animsition.min.css">
+        <link rel="stylesheet" href="resources/hover-min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    </head>
+    <body id="main" onLoad="window.scroll(0, 0)">
+		<div class="animsition loading">
+		    <div id="section" style="background:#000046;background:-webkit-linear-gradient(to right, #000046, #1cb5e0);background:linear-gradient(to right, #000046, #1cb5e0);">
+	  			<div class="logo">
+	  	    		<img src="resources/images/blackwhite.png" alt="" id="logoimg" id="animatein" class="animated zoomInDown delay">
+	  	    		<h1 class="animated fadeIn delay">Vivid Esports</h1>
+	  	    	</div>
+	        </div>
+	        <div id="section" style="background:#43C6AC;background:-webkit-linear-gradient(to right, #191654, #43C6AC);background:linear-gradient(to right, #191654, #43C6AC);">
+		        <div>
+		          <h1 class="">The Introduction</h1>
+		          <h3 class="textbox wow flipInX">The 3 leaders of Vivid met in a clan called Zync in the summer of 2016. Realizing that there was more competitive potential, Brovck, Raven and Zookuzero decided to create Vivid. Vivid sprouted very quickly and soon had over 60 community members and 4 competitive teams. As Vivid grew so did our goals and here we are today.</h3>
+		          <h2 class="wow fadeIn" style="animation-delay: 1s;">Interested?</h2>
+		          <a href="https://discordapp.com/invite/FRU8wnj" class="animsition-link"><button id="button" class="hvr-grow-rotate wow rotateIn delay" style="animation-delay: 2s;">Join Our Discord</button></a>
+		        </div>
+	        </div>
+	        <div id="section" style="background:#c33764;background:-webkit-linear-gradient(to right, #c33764, #1d2671);background:linear-gradient(to right, #c33764, #1d2671);">
+	        	<div>
+	        		<h1>Information</h1>
+	        	</div>
+			</div>
+
+        <!-- Resources -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="resources/animsition.min.js"></script>
+        <script src="resources/particles.min.js"></script>
+        <script src="resources/wow.min.js"></script>
+
+        <script type="text/javascript" charset="utf-8">
+
+        	$(document).ready(function() {
+        		$(this).scrollTop(0);
+
+        		$(".animsition").animsition({
+		            inClass: "zoom-in",
+		            outClass: "zoom-out-sm",
+		            linkElement: '.animsition-link',
+		            timeout: true,
+				    timeoutCountdown: 500,
+				    onLoadEvent: true
+		        });
+
+		        new WOW().init();
+
+		        particlesJS("section", {"particles":{"number":{"value":50,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":0,"random":false,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":4,"direction":"none","random":false,"straight":false,"out_mode":"bounce","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false},"onclick":{"enable":false},"resize":true}},"retina_detect":true});
+          	});
+
+        </script>
+    </body>
+</html>
