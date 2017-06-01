@@ -17,110 +17,230 @@
 
         <style type="text/css">
 
-          #section {
-          	height: 99vh;
-          	width: 100vw;
-          	padding-bottom:1vh;
-            position: relative;
-            display: flex;
-			justify-content: center;
-			align-items: center;
-          }
+        	.section {
+	          	height: 99vh;
+	          	width: 100vw;
+	          	padding-bottom:1vh;
+	            position: relative;
+	            display: flex;
+				align-items: center;
+				justify-content: center;
+        	}
 
-          html,body {
-            font-family: 'Source Sans Pro', sans-serif;
-            color: white;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-          }
+        	html,body {
+	            font-family: 'Source Sans Pro', sans-serif;
+	            color: white;
+	            text-align: center;
+	            margin: 0;
+	            padding: 0;
+        	}
 
-          .logo {
-            position: absolute;
-            vertical-align: middle;
-		    z-index: 100;
-          }
+        	.logo {
+	            position: absolute;
+	            vertical-align: middle;
+			    z-index: 100;
+        	}
 
-          #logoimg {
-          	height: 200px;
-          }
+        	#logoimg {
+        		height: 200px;
+        	}
 
-          .delay {
-            animation-delay: 1.3s;
-          }
+        	.delay {
+        		animation-delay: 1.3s;
+        	}
 
-          ::-webkit-scrollbar { 
-            display: none; 
-          }
+        	::-webkit-scrollbar { 
+            	display: none; 
+        	}
 
-          .textbox {
-          	border-radius: 15px;
-          	border: 2px solid #43C6AC;
-		    padding: 2vh; 
-		    margin-left: 15vw;
-		    margin-right: 15vw;
-		    margin-top: 6vh;
-		    margin-bottom: 6vh;
-          }
-          button {
-			position: relative;
-			margin: 0 auto;
-			margin-top: 3vh;
-			width: 12em;
-			background-color: transparent;
-			color: #C1CCF0;
-			border: .3em solid #7289DA;
-			border-radius: 5em;
-			text-transform: uppercase;
-			text-align: center;
-			line-height: 2.5em;
-			font-size: 1.4em;
-			font-weight: bold;
-			font-family: 'Source Sans Pro';
-			cursor: pointer;	
-		  }
-		  
+        	.textbox {
+	          	border-radius: 15px;
+	          	border: 2px solid #43C6AC;
+			    padding: 2vh; 
+			    margin-left: 15vw;
+			    margin-right: 15vw;
+			    margin-top: 6vh;
+			    margin-bottom: 6vh;
+        	}
+        	button {
+				position: relative;
+				margin: 0 auto;
+				margin-top: 3vh;
+				width: 12em;
+				background-color: transparent;
+				color: #C1CCF0;
+				border: .3em solid #7289DA;
+				border-radius: 5em;
+				text-transform: uppercase;
+				text-align: center;
+				line-height: 2.5em;
+				font-size: 1.4em;
+				font-weight: bold;
+				font-family: 'Source Sans Pro';
+				cursor: pointer;	
+			}
+
+			.cards {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-ms-flex-wrap: nowrap;
+				flex-wrap: nowrap;
+				list-style: none;
+				padding: 0;
+				color: black;
+				text-align: center;
+				margin-left: 15vw;
+			    margin-right: 15vw;
+			}
+			.cardsitem {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				padding: 1em;
+			}
+			@media (min-width: 40rem) {
+				.cardsitem {
+			    	width: 50%;
+				}
+			}
+			@media (min-width: 56rem) {
+			  .cards__item {
+			    width: 33.3333%;
+			  }
+			}
+			.card {
+			  background-color: white;
+			  border-radius: 0.25em;
+			  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+			  display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: flex;
+			  -webkit-box-orient: vertical;
+			  -webkit-box-direction: normal;
+			  -ms-flex-direction: column;
+			  flex-direction: column;
+			  overflow: hidden;
+			}
+			.cardcontent {
+			  display: -webkit-box;
+			  display: -ms-flexbox;
+			  display: flex;
+			  -webkit-box-flex: 1;
+			  -ms-flex: 1 1 auto;
+			  flex: 1 1 auto;
+			  -webkit-box-orient: vertical;
+			  -webkit-box-direction: normal;
+			  -ms-flex-direction: column;
+			  flex-direction: column;
+			  padding: 1em;
+			}
+			.cardtitle {
+				padding-top: 0.4em;
+				font-size: 2em;
+			}
+			.cardtext {
+				font-size: 1.2em;
+				font-weight: normal;
+			}
+
+			.scrolldown {
+				align-self: flex-end;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				padding-bottom: 1em;
+			}
+
+			a:link {
+			    color: white;
+			    text-decoration: none;
+			}
+			a:visited {
+			    color: white;
+			    text-decoration: none;
+			}
+			a:hover {
+			    color: white;
+			    text-decoration: none;
+			}
+			a:active {
+			    color: white;
+			    text-decoration: none;
+			}
+
         </style>
         
         <!-- Resources -->
-        <link rel="stylesheet" href="resources/animate.min.css">
-        <link rel="stylesheet" href="resources/animsition.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/css/animsition.min.css">
         <link rel="stylesheet" href="resources/hover-min.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
     </head>
     <body id="main" onLoad="window.scroll(0, 0)">
 		<div class="animsition loading">
-		    <div id="section" style="background:#000046;background:-webkit-linear-gradient(to right, #000046, #1cb5e0);background:linear-gradient(to right, #000046, #1cb5e0);">
+		    <div id="section" class="section" style="background:#000046;background:-webkit-linear-gradient(to right, #000046, #1cb5e0);background:linear-gradient(to right, #000046, #1cb5e0);">
 	  			<div class="logo">
 	  	    		<img src="resources/images/blackwhite.png" alt="" id="logoimg" id="animatein" class="animated zoomInDown delay">
 	  	    		<h1 class="animated fadeIn delay">Vivid Esports</h1>
 	  	    	</div>
+	  	    	<div class="scrolldown">
+	  	    		<a data-scroll href="#introduction" id="link"><i class="fa fa-angle-down fa-3x animated fadeIn delay" aria-hidden="true"></i></a>
+	  	    	</div>
 	        </div>
-	        <div id="section" style="background:#43C6AC;background:-webkit-linear-gradient(to right, #191654, #43C6AC);background:linear-gradient(to right, #191654, #43C6AC);">
+	        <div id="introduction" class="section" style="background:#43C6AC;background:-webkit-linear-gradient(to right, #191654, #43C6AC);background:linear-gradient(to right, #191654, #43C6AC);">
 		        <div>
 		          <h1 class="">The Introduction</h1>
 		          <h3 class="textbox wow flipInX">The 3 leaders of Vivid met in a clan called Zync in the summer of 2016. Realizing that there was more competitive potential, Brovck, Raven and Zookuzero decided to create Vivid. Vivid sprouted very quickly and soon had over 60 community members and 4 competitive teams. As Vivid grew so did our goals and here we are today.</h3>
 		          <h2 class="wow fadeIn" style="animation-delay: 1s;">Interested?</h2>
-		          <a href="https://discordapp.com/invite/FRU8wnj" class="animsition-link"><button id="button" class="hvr-grow-rotate wow rotateIn delay" style="animation-delay: 2s;">Join Our Discord</button></a>
+		          <a href="https://discordapp.com/invite/FRU8wnj" class="animsition-link" id="link"><button id="button" class="hvr-grow-rotate wow rotateIn" style="animation-delay: 1.5s;">Join Our Discord</button></a>
 		        </div>
+		        <div class="scrolldown">
+	  	    		<a data-scroll href="#information" id="link"><i class="fa fa-angle-down fa-3x wow fadeIn" aria-hidden="true"></i></a>
+	  	    	</div>
 	        </div>
-	        <div id="section" style="background:#c33764;background:-webkit-linear-gradient(to right, #c33764, #1d2671);background:linear-gradient(to right, #c33764, #1d2671);">
+	        <div id="information" class="section" style="background:#c33764;background:-webkit-linear-gradient(to right, #c33764, #1d2671);background:linear-gradient(to right, #c33764, #1d2671);">
 	        	<div>
 	        		<h1>Information</h1>
+					<ul class="cards">
+					  <li class="cardsitem wow slideInLeft">
+					    <div class="card">
+					      <div class="cardcontent">
+					        <div class="cardtitle">Where are you based?</div>
+					        <p class="cardtext">Vivid is a global community with players from all over the world. Some countries include the United States, Canada, Sweden, Italy, the UK, and more.</p>
+					      </div>
+					    </div>
+					  </li>
+					  <li class="cardsitem wow slideInRight">
+					    <div class="card">
+					      <div class="cardcontent">
+					        <div class="cardtitle">Do you have any goals?</div>
+					        <p class="cardtext">One of our main goals is to expand our competitive teams to other games, like Overwatch and Rocket League. Some other goals we have are to compete in a minor and reach 1k on Twitter and Youtube.</p>
+					      </div>
+					    </div>
+					  </li>
+					</ul>
 	        	</div>
+	        	<div class="scrolldown">
+	  	    		<a data-scroll href="#section" id="link" class="elevator"><i class="fa fa-chevron-circle-up fa-3x wow fadeIn" aria-hidden="true"></i></a>
+	  	    	</div>
 			</div>
 
         <!-- Resources -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="resources/animsition.min.js"></script>
-        <script src="resources/particles.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/4.0.2/js/animsition.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+        <script src="resources/elevator.min.js"></script>
         <script src="resources/wow.min.js"></script>
+        <script src="resources/smooth-scroll.min.js"></script>
+        <script src="https://use.fontawesome.com/b3826f148b.js"></script>
 
         <script type="text/javascript" charset="utf-8">
 
         	$(document).ready(function() {
-        		$(this).scrollTop(0);
+
+        		smoothScroll.init({speed: 2000});
 
         		$(".animsition").animsition({
 		            inClass: "zoom-in",
@@ -131,10 +251,21 @@
 				    onLoadEvent: true
 		        });
 
+		        window.onload = function() {
+				  var elevator = new Elevator({
+				    element: document.querySelector('.elevator'),
+				    mainAudio: 'resources/Lobby Time.mp3',
+				    endAudio: 'resources/91926__corsica-s__ding.wav'
+				  });
+				}
+
 		        new WOW().init();
 
 		        particlesJS("section", {"particles":{"number":{"value":50,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":0,"random":false,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":4,"direction":"none","random":false,"straight":false,"out_mode":"bounce","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false},"onclick":{"enable":false},"resize":true}},"retina_detect":true});
           	});
+        	$(window).on('beforeunload', function() {
+			    $(window).scrollTop(0);
+			});
 
         </script>
     </body>
